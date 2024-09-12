@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  /* Primary */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(217, 54%, 11%);
+  --dark-blue: hsl(216, 50%, 16%);
+  --blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", system-ui;
+  background: var(--very-dark-blue);
+  height: 100;
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8% auto;
+}
+
+h1 {
+  color: var(--white);
+}
+
+hr {
+  background-color: var(--blue);
+}
+
+p {
+  font-size: 18px;
+  color: var(--blue);
+}
+
+.container {
+  padding: 20px;
+  max-width: 350px;
+  background: var(--dark-blue);
+  border-radius: 20px;
+}
+
+.img-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: var(--cyan);
+  border-radius: 10px;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.img-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.img-container:hover .overlay + .view {
+  display: block;
+}
+
+.content {
+  margin-top: 15px;
+  max-width: 300px;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.value, .time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.value > p {
+  color: var(--cyan);
+}
+
+.creator {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.avatar {
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+
+.name {
+  color: white;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+.title:hover, .name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
